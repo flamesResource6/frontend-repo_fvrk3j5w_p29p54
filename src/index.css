@@ -15,10 +15,18 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply antialiased;
+  }
+}
+
+/* Subtle card hover */
+@layer components {
+  .card {
+    @apply rounded-xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md;
   }
 }
 
